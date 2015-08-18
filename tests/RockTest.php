@@ -9,7 +9,7 @@
 
   $server = 'mysql:host=localhost;dbname=inventory_tests';
   $username = 'root';
-  $password = 'root';
+  $password = '';
   $DB = new PDO($server, $username, $password);
 
   class RockTest extends PHPUnit_Framework_TestCase
@@ -41,9 +41,9 @@
         //Arrange
         $description = "Granite";
         $description2 = "Crystal";
-        $test_Rock = new Task($description);
+        $test_Rock = new Rock($description);
         $test_Rock->save();
-        $test_Rock2 = new Task($description2);
+        $test_Rock2 = new Rock($description2);
         $test_Rock2->save();
 
         //Act

@@ -33,7 +33,7 @@ class Rock
 
     static function getAll()
     {
-        $returned_inventory = $GLOBALS['DB']->query("SELECT * FROM rocks;");
+        $returned_rocks = $GLOBALS['DB']->query("SELECT * FROM rocks;");
         $rocks = array();
         foreach($returned_rocks as $rock) {
             $description = $rock['description'];
